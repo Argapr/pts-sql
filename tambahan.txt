@@ -1,0 +1,5 @@
+10. select sum(stok), satuan from tb_obat group by satuan;
+11. select sum(stok), jenis from tb_obat group by jenis;
+13. select nama_obat, stok, harga_beli, harga_jual, (stok * harga_beli) as total_harga_beli, (stok * harga_jual) as total_harga_jual, ((stok * harga_jual)-(stok * harga_beli)) as laba from tb_obat;
+14. select satuan, avg(cast(harga_jual as char)) as rata_rata from tb_obat where satuan != "Lembar" group by satuan;
+15. select MIN(harga_beli) as harga_beli_terendah, MAX(harga_beli) as harga_beli_tertinggi from tb_obat;
